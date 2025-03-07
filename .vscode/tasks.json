@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-std=c++11",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/${fileBasenameNoExtension}",
+        "-lmuduo_net",//添加相应的链接库
+        "-lmuduo_base",
+        "-lpthread"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}

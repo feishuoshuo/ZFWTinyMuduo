@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -g -std=c++11  -shared -Wl,-soname,libZFWTinyMuduo.so -o ../lib/libZFWTinyMuduo.so CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o 

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.cc
+iostream
+-
+Logger.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.h
+Timestamp.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.h
+string
+-
+noncopyable.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
+iostream
+-
+string
+-
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.cc
+InetAddress.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.h
+string.h
+-
+strings.h
+-
+arpa/inet.h
+-
+
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.h
+string
+-
+netinet/in.h
+-
+
