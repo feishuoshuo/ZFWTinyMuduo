@@ -9,6 +9,25 @@ CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o: ../base/noncopyable.h
 CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o: ../base/Timestamp.cc
 CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o: ../base/Timestamp.h
 
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../base/Logger.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../base/Timestamp.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../base/noncopyable.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../net/Channel.cc
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../net/Channel.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../net/EventLoop.h
+
+CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o: ../net/EventLoop.cc
+CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o: ../net/EventLoop.h
+
 CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o: ../net/InetAddress.cc
 CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o: ../net/InetAddress.h
+
+CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../base/Timestamp.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../base/noncopyable.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../net/Channel.h
+CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../net/Poller.cc
+CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../net/Poller.h
+
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/TcpServer.cc
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/TcpServer.h
 

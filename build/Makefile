@@ -177,6 +177,60 @@ base/Timestamp.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.s
 .PHONY : base/Timestamp.cc.s
 
+net/Channel.o: net/Channel.cc.o
+
+.PHONY : net/Channel.o
+
+# target to build an object file
+net/Channel.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o
+.PHONY : net/Channel.cc.o
+
+net/Channel.i: net/Channel.cc.i
+
+.PHONY : net/Channel.i
+
+# target to preprocess a source file
+net/Channel.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.i
+.PHONY : net/Channel.cc.i
+
+net/Channel.s: net/Channel.cc.s
+
+.PHONY : net/Channel.s
+
+# target to generate assembly for a file
+net/Channel.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.s
+.PHONY : net/Channel.cc.s
+
+net/EventLoop.o: net/EventLoop.cc.o
+
+.PHONY : net/EventLoop.o
+
+# target to build an object file
+net/EventLoop.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o
+.PHONY : net/EventLoop.cc.o
+
+net/EventLoop.i: net/EventLoop.cc.i
+
+.PHONY : net/EventLoop.i
+
+# target to preprocess a source file
+net/EventLoop.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.i
+.PHONY : net/EventLoop.cc.i
+
+net/EventLoop.s: net/EventLoop.cc.s
+
+.PHONY : net/EventLoop.s
+
+# target to generate assembly for a file
+net/EventLoop.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.s
+.PHONY : net/EventLoop.cc.s
+
 net/InetAddress.o: net/InetAddress.cc.o
 
 .PHONY : net/InetAddress.o
@@ -204,6 +258,60 @@ net/InetAddress.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.s
 .PHONY : net/InetAddress.cc.s
 
+net/Poller.o: net/Poller.cc.o
+
+.PHONY : net/Poller.o
+
+# target to build an object file
+net/Poller.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o
+.PHONY : net/Poller.cc.o
+
+net/Poller.i: net/Poller.cc.i
+
+.PHONY : net/Poller.i
+
+# target to preprocess a source file
+net/Poller.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.i
+.PHONY : net/Poller.cc.i
+
+net/Poller.s: net/Poller.cc.s
+
+.PHONY : net/Poller.s
+
+# target to generate assembly for a file
+net/Poller.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.s
+.PHONY : net/Poller.cc.s
+
+net/TcpServer.o: net/TcpServer.cc.o
+
+.PHONY : net/TcpServer.o
+
+# target to build an object file
+net/TcpServer.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o
+.PHONY : net/TcpServer.cc.o
+
+net/TcpServer.i: net/TcpServer.cc.i
+
+.PHONY : net/TcpServer.i
+
+# target to preprocess a source file
+net/TcpServer.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.i
+.PHONY : net/TcpServer.cc.i
+
+net/TcpServer.s: net/TcpServer.cc.s
+
+.PHONY : net/TcpServer.s
+
+# target to generate assembly for a file
+net/TcpServer.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.s
+.PHONY : net/TcpServer.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,9 +327,21 @@ help:
 	@echo "... base/Timestamp.o"
 	@echo "... base/Timestamp.i"
 	@echo "... base/Timestamp.s"
+	@echo "... net/Channel.o"
+	@echo "... net/Channel.i"
+	@echo "... net/Channel.s"
+	@echo "... net/EventLoop.o"
+	@echo "... net/EventLoop.i"
+	@echo "... net/EventLoop.s"
 	@echo "... net/InetAddress.o"
 	@echo "... net/InetAddress.i"
 	@echo "... net/InetAddress.s"
+	@echo "... net/Poller.o"
+	@echo "... net/Poller.i"
+	@echo "... net/Poller.s"
+	@echo "... net/TcpServer.o"
+	@echo "... net/TcpServer.i"
+	@echo "... net/TcpServer.s"
 .PHONY : help
 
 
