@@ -123,6 +123,33 @@ ZFWTinyMuduo/fast:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/build
 .PHONY : ZFWTinyMuduo/fast
 
+base/CurrentThread.o: base/CurrentThread.cc.o
+
+.PHONY : base/CurrentThread.o
+
+# target to build an object file
+base/CurrentThread.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o
+.PHONY : base/CurrentThread.cc.o
+
+base/CurrentThread.i: base/CurrentThread.cc.i
+
+.PHONY : base/CurrentThread.i
+
+# target to preprocess a source file
+base/CurrentThread.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.i
+.PHONY : base/CurrentThread.cc.i
+
+base/CurrentThread.s: base/CurrentThread.cc.s
+
+.PHONY : base/CurrentThread.s
+
+# target to generate assembly for a file
+base/CurrentThread.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s
+.PHONY : base/CurrentThread.cc.s
+
 base/Logger.o: base/Logger.cc.o
 
 .PHONY : base/Logger.o
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ZFWTinyMuduo"
+	@echo "... base/CurrentThread.o"
+	@echo "... base/CurrentThread.i"
+	@echo "... base/CurrentThread.s"
 	@echo "... base/Logger.o"
 	@echo "... base/Logger.i"
 	@echo "... base/Logger.s"

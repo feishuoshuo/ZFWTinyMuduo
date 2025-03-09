@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../lib/libZFWTinyMuduo.pdb"
   "../lib/libZFWTinyMuduo.so"
+  "CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o"

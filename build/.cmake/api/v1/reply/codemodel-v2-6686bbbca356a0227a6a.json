@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZFWTinyMuduo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZFWTinyMuduo-f12b345d2bc7af34cb67.json",
+					"jsonFile" : "target-ZFWTinyMuduo-Debug-30c856ccb11ae1bd4e94.json",
 					"name" : "ZFWTinyMuduo",
 					"projectIndex" : 0
 				}

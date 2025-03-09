@@ -57,9 +57,22 @@ include CMakeFiles/ZFWTinyMuduo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ZFWTinyMuduo.dir/flags.make
 
+CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
+CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o: ../base/CurrentThread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.cc
+
+CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.cc > CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.i
+
+CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.cc -o CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s
+
 CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o: ../base/Logger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o: ../base/Timestamp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o: ../net/Channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Channel.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o: ../net/EventLoop.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoop.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o: ../net/InetAddress.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o: ../net/Poller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Poller.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.s: cmake_force
 
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: CMakeFiles/ZFWTinyMuduo.dir/flags.make
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/TcpServer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpServer.cc
 
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.i: cmake_force
@@ -150,6 +163,7 @@ CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.s: cmake_force
 
 # Object files for target ZFWTinyMuduo
 ZFWTinyMuduo_OBJECTS = \
+"CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o" \
 "CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o" \
 "CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o" \
 "CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o" \
@@ -161,6 +175,7 @@ ZFWTinyMuduo_OBJECTS = \
 # External object files for target ZFWTinyMuduo
 ZFWTinyMuduo_EXTERNAL_OBJECTS =
 
+../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/net/Channel.cc.o
@@ -170,7 +185,7 @@ ZFWTinyMuduo_EXTERNAL_OBJECTS =
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/build.make
 ../lib/libZFWTinyMuduo.so: CMakeFiles/ZFWTinyMuduo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library ../lib/libZFWTinyMuduo.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library ../lib/libZFWTinyMuduo.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ZFWTinyMuduo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
