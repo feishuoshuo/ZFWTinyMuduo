@@ -177,6 +177,33 @@ base/Logger.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.s
 .PHONY : base/Logger.cc.s
 
+base/Thread.o: base/Thread.cc.o
+
+.PHONY : base/Thread.o
+
+# target to build an object file
+base/Thread.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.o
+.PHONY : base/Thread.cc.o
+
+base/Thread.i: base/Thread.cc.i
+
+.PHONY : base/Thread.i
+
+# target to preprocess a source file
+base/Thread.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.i
+.PHONY : base/Thread.cc.i
+
+base/Thread.s: base/Thread.cc.s
+
+.PHONY : base/Thread.s
+
+# target to generate assembly for a file
+base/Thread.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.s
+.PHONY : base/Thread.cc.s
+
 base/Timestamp.o: base/Timestamp.cc.o
 
 .PHONY : base/Timestamp.o
@@ -203,6 +230,87 @@ base/Timestamp.s: base/Timestamp.cc.s
 base/Timestamp.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.s
 .PHONY : base/Timestamp.cc.s
+
+net/Acceptor.o: net/Acceptor.cc.o
+
+.PHONY : net/Acceptor.o
+
+# target to build an object file
+net/Acceptor.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Acceptor.cc.o
+.PHONY : net/Acceptor.cc.o
+
+net/Acceptor.i: net/Acceptor.cc.i
+
+.PHONY : net/Acceptor.i
+
+# target to preprocess a source file
+net/Acceptor.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Acceptor.cc.i
+.PHONY : net/Acceptor.cc.i
+
+net/Acceptor.s: net/Acceptor.cc.s
+
+.PHONY : net/Acceptor.s
+
+# target to generate assembly for a file
+net/Acceptor.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Acceptor.cc.s
+.PHONY : net/Acceptor.cc.s
+
+net/Buffer.o: net/Buffer.cc.o
+
+.PHONY : net/Buffer.o
+
+# target to build an object file
+net/Buffer.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Buffer.cc.o
+.PHONY : net/Buffer.cc.o
+
+net/Buffer.i: net/Buffer.cc.i
+
+.PHONY : net/Buffer.i
+
+# target to preprocess a source file
+net/Buffer.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Buffer.cc.i
+.PHONY : net/Buffer.cc.i
+
+net/Buffer.s: net/Buffer.cc.s
+
+.PHONY : net/Buffer.s
+
+# target to generate assembly for a file
+net/Buffer.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Buffer.cc.s
+.PHONY : net/Buffer.cc.s
+
+net/Callbacks.o: net/Callbacks.cc.o
+
+.PHONY : net/Callbacks.o
+
+# target to build an object file
+net/Callbacks.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Callbacks.cc.o
+.PHONY : net/Callbacks.cc.o
+
+net/Callbacks.i: net/Callbacks.cc.i
+
+.PHONY : net/Callbacks.i
+
+# target to preprocess a source file
+net/Callbacks.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Callbacks.cc.i
+.PHONY : net/Callbacks.cc.i
+
+net/Callbacks.s: net/Callbacks.cc.s
+
+.PHONY : net/Callbacks.s
+
+# target to generate assembly for a file
+net/Callbacks.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Callbacks.cc.s
+.PHONY : net/Callbacks.cc.s
 
 net/Channel.o: net/Channel.cc.o
 
@@ -258,6 +366,60 @@ net/EventLoop.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoop.cc.s
 .PHONY : net/EventLoop.cc.s
 
+net/EventLoopThread.o: net/EventLoopThread.cc.o
+
+.PHONY : net/EventLoopThread.o
+
+# target to build an object file
+net/EventLoopThread.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThread.cc.o
+.PHONY : net/EventLoopThread.cc.o
+
+net/EventLoopThread.i: net/EventLoopThread.cc.i
+
+.PHONY : net/EventLoopThread.i
+
+# target to preprocess a source file
+net/EventLoopThread.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThread.cc.i
+.PHONY : net/EventLoopThread.cc.i
+
+net/EventLoopThread.s: net/EventLoopThread.cc.s
+
+.PHONY : net/EventLoopThread.s
+
+# target to generate assembly for a file
+net/EventLoopThread.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThread.cc.s
+.PHONY : net/EventLoopThread.cc.s
+
+net/EventLoopThreadPool.o: net/EventLoopThreadPool.cc.o
+
+.PHONY : net/EventLoopThreadPool.o
+
+# target to build an object file
+net/EventLoopThreadPool.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThreadPool.cc.o
+.PHONY : net/EventLoopThreadPool.cc.o
+
+net/EventLoopThreadPool.i: net/EventLoopThreadPool.cc.i
+
+.PHONY : net/EventLoopThreadPool.i
+
+# target to preprocess a source file
+net/EventLoopThreadPool.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThreadPool.cc.i
+.PHONY : net/EventLoopThreadPool.cc.i
+
+net/EventLoopThreadPool.s: net/EventLoopThreadPool.cc.s
+
+.PHONY : net/EventLoopThreadPool.s
+
+# target to generate assembly for a file
+net/EventLoopThreadPool.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThreadPool.cc.s
+.PHONY : net/EventLoopThreadPool.cc.s
+
 net/InetAddress.o: net/InetAddress.cc.o
 
 .PHONY : net/InetAddress.o
@@ -312,6 +474,60 @@ net/Poller.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.s
 .PHONY : net/Poller.cc.s
 
+net/Socket.o: net/Socket.cc.o
+
+.PHONY : net/Socket.o
+
+# target to build an object file
+net/Socket.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o
+.PHONY : net/Socket.cc.o
+
+net/Socket.i: net/Socket.cc.i
+
+.PHONY : net/Socket.i
+
+# target to preprocess a source file
+net/Socket.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.i
+.PHONY : net/Socket.cc.i
+
+net/Socket.s: net/Socket.cc.s
+
+.PHONY : net/Socket.s
+
+# target to generate assembly for a file
+net/Socket.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.s
+.PHONY : net/Socket.cc.s
+
+net/TcpConnection.o: net/TcpConnection.cc.o
+
+.PHONY : net/TcpConnection.o
+
+# target to build an object file
+net/TcpConnection.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o
+.PHONY : net/TcpConnection.cc.o
+
+net/TcpConnection.i: net/TcpConnection.cc.i
+
+.PHONY : net/TcpConnection.i
+
+# target to preprocess a source file
+net/TcpConnection.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.i
+.PHONY : net/TcpConnection.cc.i
+
+net/TcpConnection.s: net/TcpConnection.cc.s
+
+.PHONY : net/TcpConnection.s
+
+# target to generate assembly for a file
+net/TcpConnection.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.s
+.PHONY : net/TcpConnection.cc.s
+
 net/TcpServer.o: net/TcpServer.cc.o
 
 .PHONY : net/TcpServer.o
@@ -354,21 +570,45 @@ help:
 	@echo "... base/Logger.o"
 	@echo "... base/Logger.i"
 	@echo "... base/Logger.s"
+	@echo "... base/Thread.o"
+	@echo "... base/Thread.i"
+	@echo "... base/Thread.s"
 	@echo "... base/Timestamp.o"
 	@echo "... base/Timestamp.i"
 	@echo "... base/Timestamp.s"
+	@echo "... net/Acceptor.o"
+	@echo "... net/Acceptor.i"
+	@echo "... net/Acceptor.s"
+	@echo "... net/Buffer.o"
+	@echo "... net/Buffer.i"
+	@echo "... net/Buffer.s"
+	@echo "... net/Callbacks.o"
+	@echo "... net/Callbacks.i"
+	@echo "... net/Callbacks.s"
 	@echo "... net/Channel.o"
 	@echo "... net/Channel.i"
 	@echo "... net/Channel.s"
 	@echo "... net/EventLoop.o"
 	@echo "... net/EventLoop.i"
 	@echo "... net/EventLoop.s"
+	@echo "... net/EventLoopThread.o"
+	@echo "... net/EventLoopThread.i"
+	@echo "... net/EventLoopThread.s"
+	@echo "... net/EventLoopThreadPool.o"
+	@echo "... net/EventLoopThreadPool.i"
+	@echo "... net/EventLoopThreadPool.s"
 	@echo "... net/InetAddress.o"
 	@echo "... net/InetAddress.i"
 	@echo "... net/InetAddress.s"
 	@echo "... net/Poller.o"
 	@echo "... net/Poller.i"
 	@echo "... net/Poller.s"
+	@echo "... net/Socket.o"
+	@echo "... net/Socket.i"
+	@echo "... net/Socket.s"
+	@echo "... net/TcpConnection.o"
+	@echo "... net/TcpConnection.i"
+	@echo "... net/TcpConnection.s"
 	@echo "... net/TcpServer.o"
 	@echo "... net/TcpServer.i"
 	@echo "... net/TcpServer.s"

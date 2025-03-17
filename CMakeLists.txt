@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)# 需求的最低的cmake程序版本
 project(ZFWTinyMuduo)
 
 include_directories(base)
+
 #ZFWTinyMuduo最终编译成.so动态库，设置动态库路径
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #设置调试信息 以及 启动c++11语言标准

@@ -62,7 +62,7 @@ namespace zfwmuduo
     uint64_t one = 1;
     ssize_t n = read(wakeupFd_, &one, sizeof one);
     if (n != sizeof one) // 读出现错误，程序还是允许继续运行LOG_ERROR
-      LOG_ERROR("EventLoop::handleRead() reads %d bytes instead of 8", n)
+      LOG_ERROR("EventLoop::handleRead() reads %ld bytes instead of 8", n)
   }
 
   EventLoop::~EventLoop()
@@ -164,7 +164,7 @@ namespace zfwmuduo
     uint64_t one = 1;
     ssize_t n = write(wakeupFd_, &one, sizeof one);
     if (n != sizeof one)
-      LOG_ERROR("EventLoop::wakeup() writes %d bytes instead of 8", n);
+      LOG_ERROR("EventLoop::wakeup() writes %ld bytes instead of 8", n);
   }
 
   // EventLoop的方法 ==> Poller的方法

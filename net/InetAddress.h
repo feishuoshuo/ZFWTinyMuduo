@@ -21,6 +21,7 @@ namespace zfwmuduo
     uint16_t toPort() const;
 
     const sockaddr_in *getSockAddr() const { return &addr_; } // 由于返回的是*指针 所以&取地址
+    void setSockAddr(const sockaddr_in &addr) { addr_ = addr; }
   };
 
 }

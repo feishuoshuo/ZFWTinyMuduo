@@ -20,8 +20,11 @@ namespace zfwmuduo
     extern __thread const char *t_threadName;
     void cacheTid();
 
+    // 获取当前线程id
     inline int tid()
     {
+      // NOTE： __builtin_expect 是 GCC 提供的一个内置函数，用于优化分支预测
+      // t_cachedTid == 0，表示线程ID尚未被缓存
       if (__builtin_expect(t_cachedTid == 0, 0))
       {
         cacheTid();

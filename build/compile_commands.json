@@ -11,8 +11,28 @@
 },
 {
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Thread.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Thread.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
   "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.cc",
   "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/Acceptor.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Acceptor.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Acceptor.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/Buffer.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Buffer.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Buffer.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/Callbacks.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Callbacks.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Callbacks.cc"
 },
 {
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
@@ -26,6 +46,16 @@
 },
 {
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThread.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoopThread.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoopThread.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/EventLoopThreadPool.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoopThreadPool.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoopThreadPool.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
   "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/InetAddress.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.cc",
   "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.cc"
 },
@@ -33,6 +63,16 @@
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
   "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/Poller.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Poller.cc",
   "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Poller.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Socket.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Socket.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.cc"
 },
 {
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
