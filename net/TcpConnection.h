@@ -100,7 +100,6 @@ namespace zfwmuduo
     WriteCompleteCallback writeCompleteCallback_; // 消息发送后的回调
     HighWaterMarkCallback highWaterMarkCallback_;
     CloseCallback closeCallback_;
-
     size_t highWaterMark_; // 水位标志
 
     Buffer inputBuffer;

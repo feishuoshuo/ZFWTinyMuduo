@@ -7,7 +7,7 @@
 namespace zfwmuduo
 {
   // 不接受用户传一个空指针给loop_
-  EventLoop *CheckLoopNotNull(EventLoop *loop)
+  static EventLoop *CheckLoopNotNull(EventLoop *loop)
   {
     if (!loop)
     {
