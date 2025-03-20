@@ -81,14 +81,29 @@ CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o: ../net/InetAddress.h
 CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o: ../net/Socket.cc
 CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o: ../net/Socket.h
 
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/Logger.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/Timestamp.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/noncopyable.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/CurrentThread.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/Timestamp.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../base/noncopyable.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/Buffer.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/Callbacks.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/Channel.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/EventLoop.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/InetAddress.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/Socket.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/TcpConnection.cc
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o: ../net/TcpConnection.h
 
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/Timestamp.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/noncopyable.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/CurrentThread.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/Logger.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/Timestamp.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../base/noncopyable.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/Acceptor.h
+CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/Buffer.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/Callbacks.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/Channel.h
 CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o: ../net/EventLoop.h
