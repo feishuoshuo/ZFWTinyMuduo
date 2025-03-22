@@ -35,7 +35,8 @@ namespace zfwmuduo
     loop_->removeChannel(this);
   }
 
-  // TODO：tie何时调用
+  // tie何时调用? 一个TcpConnection新连接创建的时候
+  // TcpConnection => Channel
   void Channel::tie(const std::shared_ptr<void> &obj)
   {
     tie_ = obj;
@@ -46,7 +47,8 @@ namespace zfwmuduo
   {
     if (tied_) // 已于其他对象所绑定
     {
-      std::shared_ptr<void> guard = tie_.lock(); // 尝试将 weak_ptr --> shared_ptr
+      // NOTE: lock(): 尝试将 weak_ptr --> shared_ptr
+      std::shared_ptr<void> guard = tie_.lock();
       if (guard)
         handleEventWithGuard(receiveTime);
     }

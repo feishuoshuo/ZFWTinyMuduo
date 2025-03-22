@@ -49,8 +49,8 @@ namespace zfwmuduo
     bool connected() const { return state_ == kConnected; }
     bool disconnected() const { return state_ == kDisconnected; }
 
-    void send(const void *message, int len); // 用于发送数据
-    void shutdown();                         // 关闭连接
+    void send(const std::string &buf); // 用于发送数据
+    void shutdown();                   // 关闭连接
 
     void setConnectionCallback(const ConnectionCallback &cb) { connectionCallback_ = cb; }
     void setMessageCallback(const MessageCallback &cb) { messageCallback_ = cb; }
@@ -73,13 +73,14 @@ namespace zfwmuduo
       kConnected,
       kDisconnecting
     };
+    void setState(StateE state) { state_ = state; }
 
     void handleRead(Timestamp receiveTime);
     void handleWrite();
     void handleClose();
     void handleError();
 
-    void sendInLoop(const void *message, size_t len);
+    void sendInLoop(const void *data, size_t len);
     void shutdownInLoop();
 
     EventLoop *loop_; // 这里绝对不是baseloop!! 因为TcpConnection都是在subloop里面管理的
@@ -102,8 +103,8 @@ namespace zfwmuduo
     CloseCallback closeCallback_;
     size_t highWaterMark_; // 水位标志
 
-    Buffer inputBuffer;
-    Buffer outputBuffer;
+    Buffer inputBuffer_;  // 接收数据的缓冲区
+    Buffer outputBuffer_; // 发送数据的缓冲区
   };
 
 } // namespace zfwmuduo
