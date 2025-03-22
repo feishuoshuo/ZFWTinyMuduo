@@ -68,16 +68,6 @@ functional
 ../base/Timestamp.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
 
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Channel.cc
-Channel.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Channel.h
-EventLoop.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoop.h
-../base/Logger.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.h
-sys/epoll.h
--
-
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Channel.h
 functional
 -
@@ -184,6 +174,10 @@ TcpConnection.h
 functional
 -
 string
+-
+strings.h
+-
+sys/socket.h
 -
 
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpServer.h
