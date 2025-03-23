@@ -33,8 +33,6 @@ namespace zfwmuduo
                                                          readerIndex_(kCheapPrepend),
                                                          writeIndex_(kCheapPrepend) {}
 
-    ~Buffer();
-
     size_t readableBytes() const { return writeIndex_ - readerIndex_; }
     size_t writeableBytes() const { return buffer_.size() - writeIndex_; }
     size_t prependableBytes() const { return readerIndex_; }

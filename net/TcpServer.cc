@@ -28,7 +28,8 @@ namespace zfwmuduo
                                         threadPool_(new EventLoopThreadPool(loop, nameArg)),             // 线程池对象创建，默认不会自己先开启额外线程(即刚开始只有主线程(它运行mainloop))
                                         connectionCallback_(),
                                         messageCallback_(),
-                                        nextConnId_(1)
+                                        nextConnId_(1),
+                                        started_(0)
   {
     // 当有新用户连接时，会执行TcpServer::newConnection回调
     acceptor_->setNewConnectionCallback(

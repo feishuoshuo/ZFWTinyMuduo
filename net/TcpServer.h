@@ -9,12 +9,16 @@
 #include <memory> // unique_ptr, shared_ptr
 #include <atomic> // AtomicInt
 #include <unordered_map>
-#include "noncopyable.h"
+#include "../base/noncopyable.h"
 #include "EventLoopThreadPool.h"
 #include "EventLoop.h"
 #include "Acceptor.h"
 #include "InetAddress.h"
 #include "Callbacks.h" //ConnectionCallback, MessageCallback, WriteCompleteCallback, ThreadInitCallback
+
+// TAG：[编程好习惯]注意! 为给用户很好的使用体验 最好经常使用的主要的头文件即TcpServer, 均加上其他头文件
+#include "TcpConnection.h"
+#include "Buffer.h"
 
 /**
  * TcpServer: 对外服务器编程使用的类

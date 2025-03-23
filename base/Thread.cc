@@ -1,6 +1,6 @@
 #include "Thread.h"
-#include "CurrentThread.h"
-#include <semaphore.h> //信号量的处理 sem_t、sem_init()、sem_wait()、sem_post()
+#include "CurrentThread.h" // currentThread::tid()
+#include <semaphore.h>     //信号量的处理 sem_t、sem_init()、sem_wait()、sem_post()
 
 namespace zfwmuduo
 {
@@ -31,7 +31,7 @@ namespace zfwmuduo
     // 开启线程
     //  NOTE：lambda表达式: 以引用的方式接收外部的对象
     thread_ = std::shared_ptr<std::thread>(new std::thread([&]() { // 启动新线程, 获取线程的tid值
-      tid_ = CurrentThread::tid();
+      tid_ = zfwmuduo::currentThread::tid();
 
       sem_post(&sem); // 信号量通知：释放一个信号量，通知主线程线程ID已经准备好
 

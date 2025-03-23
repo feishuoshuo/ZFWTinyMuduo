@@ -78,5 +78,15 @@
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
   "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpServer.cc",
   "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpServer.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/poller/DefaultPoller.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/poller/DefaultPoller.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/poller/EPollPoller.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/poller/EPollPoller.cc"
 }
 ]

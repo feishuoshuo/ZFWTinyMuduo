@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.o"
 )
 
 # Per-language clean rules from dependency scanning.

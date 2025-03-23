@@ -11,6 +11,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
 #定义参与编译的源代码文件 .指的是该项目根目录下所有源文件
 # aux_source_directory(. SRC_LIST)
 
-file(GLOB SRC_LIST "base/*.cc" "net/*.cc")
+file(GLOB SRC_LIST "base/*.cc" "net/*.cc" "net/poller/*.cc")
 #编译生成动态库ZFWTinyMuduo
 add_library(ZFWTinyMuduo SHARED ${SRC_LIST})

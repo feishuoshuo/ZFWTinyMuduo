@@ -9,7 +9,7 @@
 namespace zfwmuduo
 {
 
-  namespace CurrentThread
+  namespace currentThread
   {
     // internal
     // NOTE: __thread相当于thread_local, 表示变量 t_cachedTid 是线程局部的，每个线程都有自己的独立副本

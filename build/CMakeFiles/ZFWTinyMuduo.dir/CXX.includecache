@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../base/Logger.h
-string
--
-noncopyable.h
-../base/noncopyable.h
-
-../base/Timestamp.h
-iostream
--
-string
--
-
-../base/noncopyable.h
-
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
 unistd.h
 -
@@ -118,34 +104,6 @@ netinet/in.h
 ../base/noncopyable.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
 
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.cc
-functional
--
-errno.h
--
-sys/types.h
--
-sys/socket.h
--
-string.h
--
-netinet/tcp.h
--
-memory
--
-string
--
-TcpConnection.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.h
-Logger.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Logger.h
-Socket.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Socket.h
-Channel.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Channel.h
-EventLoop.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoop.h
-
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.h
 memory
 -
@@ -161,8 +119,8 @@ Callbacks.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Callbacks.h
 Buffer.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Buffer.h
-Timestamp.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Timestamp.h
+../base/Timestamp.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
 
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpServer.cc
 TcpServer.h
@@ -191,8 +149,8 @@ atomic
 -
 unordered_map
 -
-noncopyable.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/noncopyable.h
+../base/noncopyable.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
 EventLoopThreadPool.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/EventLoopThreadPool.h
 EventLoop.h
@@ -203,4 +161,8 @@ InetAddress.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/InetAddress.h
 Callbacks.h
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Callbacks.h
+TcpConnection.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/TcpConnection.h
+Buffer.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/net/Buffer.h
 

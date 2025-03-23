@@ -555,6 +555,60 @@ net/TcpServer.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.s
 .PHONY : net/TcpServer.cc.s
 
+net/poller/DefaultPoller.o: net/poller/DefaultPoller.cc.o
+
+.PHONY : net/poller/DefaultPoller.o
+
+# target to build an object file
+net/poller/DefaultPoller.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.o
+.PHONY : net/poller/DefaultPoller.cc.o
+
+net/poller/DefaultPoller.i: net/poller/DefaultPoller.cc.i
+
+.PHONY : net/poller/DefaultPoller.i
+
+# target to preprocess a source file
+net/poller/DefaultPoller.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.i
+.PHONY : net/poller/DefaultPoller.cc.i
+
+net/poller/DefaultPoller.s: net/poller/DefaultPoller.cc.s
+
+.PHONY : net/poller/DefaultPoller.s
+
+# target to generate assembly for a file
+net/poller/DefaultPoller.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.s
+.PHONY : net/poller/DefaultPoller.cc.s
+
+net/poller/EPollPoller.o: net/poller/EPollPoller.cc.o
+
+.PHONY : net/poller/EPollPoller.o
+
+# target to build an object file
+net/poller/EPollPoller.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.o
+.PHONY : net/poller/EPollPoller.cc.o
+
+net/poller/EPollPoller.i: net/poller/EPollPoller.cc.i
+
+.PHONY : net/poller/EPollPoller.i
+
+# target to preprocess a source file
+net/poller/EPollPoller.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.i
+.PHONY : net/poller/EPollPoller.cc.i
+
+net/poller/EPollPoller.s: net/poller/EPollPoller.cc.s
+
+.PHONY : net/poller/EPollPoller.s
+
+# target to generate assembly for a file
+net/poller/EPollPoller.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.s
+.PHONY : net/poller/EPollPoller.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -612,6 +666,12 @@ help:
 	@echo "... net/TcpServer.o"
 	@echo "... net/TcpServer.i"
 	@echo "... net/TcpServer.s"
+	@echo "... net/poller/DefaultPoller.o"
+	@echo "... net/poller/DefaultPoller.i"
+	@echo "... net/poller/DefaultPoller.s"
+	@echo "... net/poller/EPollPoller.o"
+	@echo "... net/poller/EPollPoller.i"
+	@echo "... net/poller/EPollPoller.s"
 .PHONY : help
 
 

@@ -19,7 +19,7 @@ namespace zfwmuduo
     typedef std::vector<Channel *> ChannelList;
     Poller(EventLoop *loop);
     // TAG: [编程好习惯] 基类的析构函数必须是虚函数，否则可能会导致内存资源释放的不完全
-    virtual ~Poller();
+    virtual ~Poller() = default;
 
     // 给所有IO复用保留统一的接口
     virtual Timestamp poll(int timeoutMs, ChannelList *activeChannels) = 0;

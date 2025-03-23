@@ -8,6 +8,7 @@
 #include "Logger.h" // LOG_FATAL, LOG_DEBUG, LOG_ERROR, LOG_INFO
 #include "Poller.h"
 #include "Channel.h"
+#include "../base/CurrentThread.h" // currentThread::tid()
 
 namespace zfwmuduo
 {
@@ -31,7 +32,7 @@ namespace zfwmuduo
   EventLoop::EventLoop() : looping_(false),
                            quit_(false),
                            callingPendingFunctors_(false),
-                           threadId_(CurrentThread::tid()),
+                           threadId_(zfwmuduo::currentThread::tid()),
                            poller_(Poller::newDefaultPoller(this)),
                            wakeupFd_(createEventfd()),
                            wakeupChannel_(new Channel(this, wakeupFd_))

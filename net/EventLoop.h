@@ -7,7 +7,7 @@
 #include <mutex>  // mutex
 #include "../base/noncopyable.h"
 #include "../base/Timestamp.h"
-#include "../base/CurrentThread.h"
+#include "../base/CurrentThread.h" // currentThread::tid()
 
 /**
  * EventLoop：事件循环  <-- Reactor模型上对应Demultiplex(多路事件分发器)
@@ -46,7 +46,7 @@ namespace zfwmuduo
     bool hasChannel(Channel *channel);
 
     // 判断EventLoop对象是否在自己线程中
-    bool isInLoopThread() const { return threadId_ == CurrentThread::tid(); }
+    bool isInLoopThread() const { return threadId_ == zfwmuduo::currentThread::tid(); }
 
   private:
     void handleRead();        // wakeup()
