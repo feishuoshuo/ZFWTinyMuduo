@@ -11,8 +11,7 @@
         "${file}",
         "-o",
         "${workspaceFolder}/${fileBasenameNoExtension}",
-        "-lmuduo_net",
-        "-lmuduo_base",
+        "-lZFWTinyMuduo",
         "-lpthread"
       ],
       "group": "build",

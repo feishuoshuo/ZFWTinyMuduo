@@ -37,8 +37,16 @@ namespace zfwmuduo
 
   int Socket::accept(InetAddress *peeraddr)
   {
+
+    /**
+     * 1. accept函数的参数不合法
+     * 2. 对返回的connfd没有设置非阻塞
+     * Reactor模型 one loop per thread
+     * poller + non-blocking IO
+     **/
+
     sockaddr_in addr;
-    socklen_t len;
+    socklen_t len = sizeof(addr);
     bzero(&addr, sizeof addr); // 将 addr 初始化为零
     // accept 函数通过返回 -1 和设置 errno 来表示失败
     int connfd = ::accept(sockfd_, (sockaddr *)&addr, &len);
