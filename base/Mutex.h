@@ -23,6 +23,7 @@ namespace zfwmuduo
       pthread_mutex_destroy(&mutex_);
     }
 
+    // 用于程序断言
     bool isLockedByThisThread() { return holder_ == currentThread::tid(); }
     void assertLocked() { assert(isLockedByThisThread()); }
 

@@ -1,5 +1,5 @@
-#include "../Mutex.h"
-#include "../Thread.h"
+#include "../../../base/Mutex.h"
+#include "../../../base/Thread.h"
 #include <set>
 #include <stdio.h>
 
@@ -10,20 +10,20 @@ class Inventory
 public:
   void add(Request *req)
   {
-    muduo::MutexLockGuard lock(mutex_);
+    zfwmuduo::MutexLockGuard lock(mutex_);
     requests_.insert(req);
   }
 
   void remove(Request *req) __attribute__((noinline))
   {
-    muduo::MutexLockGuard lock(mutex_);
+    zfwmuduo::MutexLockGuard lock(mutex_);
     requests_.erase(req);
   }
 
   void printAll() const;
 
 private:
-  mutable muduo::MutexLock mutex_;
+  mutable zfwmuduo::MutexLock mutex_;
   std::set<Request *> requests_;
 };
 
@@ -34,32 +34,32 @@ class Request
 public:
   void process() // __attribute__ ((noinline))
   {
-    muduo::MutexLockGuard lock(mutex_);
+    zfwmuduo::MutexLockGuard lock(mutex_);
     g_inventory.add(this);
     // ...
   }
 
   ~Request() __attribute__((noinline))
   {
-    muduo::MutexLockGuard lock(mutex_);
+    zfwmuduo::MutexLockGuard lock(mutex_);
     sleep(1);
     g_inventory.remove(this);
   }
 
   void print() const __attribute__((noinline))
   {
-    muduo::MutexLockGuard lock(mutex_);
+    zfwmuduo::MutexLockGuard lock(mutex_);
     // ...
   }
 
 private:
-  mutable muduo::MutexLock mutex_;
+  mutable zfwmuduo::MutexLock mutex_;
 };
 
 void Inventory::printAll() const
 {
-  muduo::MutexLockGuard lock(mutex_);
-  sleep(1);
+  zfwmuduo::MutexLockGuard lock(mutex_);
+  sleep(1); // 为了容易复现死锁, 这里用了延时
   for (std::set<Request *>::const_iterator it = requests_.begin();
        it != requests_.end();
        ++it)
@@ -93,11 +93,26 @@ void threadFunc()
   delete req;
 }
 
-int main()
+void thread1()
 {
-  muduo::Thread thread(threadFunc);
+  zfwmuduo::Thread thread(threadFunc);
   thread.start();
-  usleep(500 * 1000);
+  usleep(500 * 1000); // 为了让另一个线程等在前面sleep()上
   g_inventory.printAll();
   thread.join();
+}
+
+void thread2()
+{
+  zfwmuduo::Thread thread(threadFunc);
+  thread.start();
+  usleep(500 * 1000); // 为了让另一个线程等在前面sleep()上
+  g_inventory.printAll();
+  thread.join();
+}
+
+int main()
+{
+  thread1();
+  thread2();
 }

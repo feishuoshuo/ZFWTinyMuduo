@@ -43,6 +43,7 @@ namespace zfwmuduo
     sem_wait(&sem); // 阻塞当前线程，直到信号量的值大于 0
   }
 
+  //// 等待子线程完成
   void Thread::join()
   {
     joined_ = true;
