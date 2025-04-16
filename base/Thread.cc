@@ -1,4 +1,5 @@
 #include "Thread.h"
+#include <memory>
 #include "CurrentThread.h" // currentThread::tid()
 #include <semaphore.h>     //信号量的处理 sem_t、sem_init()、sem_wait()、sem_post()
 
