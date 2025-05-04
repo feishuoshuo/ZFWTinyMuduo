@@ -89,8 +89,8 @@ namespace zfwmuduo
 
     EventLoop *loop_; // 事件循环
     const int fd_;    // fd, Poller监听的对象
-    int events_;      // 注册fd感兴趣的事件
-    int revents_;     // poller返回的具体发生的事件
+    int events_;      // [用户设置]注册fd感兴趣的IO事件
+    int revents_;     // [EventLoop/poller]返回的具体发生的事件/目前活动的事件
     int index_;
 
     // NOTE：weak_ptr 解决循环引用问题

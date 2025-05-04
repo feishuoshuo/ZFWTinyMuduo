@@ -2,17 +2,19 @@
 #include "../../../base/Thread.h"
 #include <set>
 #include <stdio.h>
-#include <memory>
+#include <memory> // enable_shared_from_this<T>、weak_ptr、shared_ptr
 #include <assert.h>
 
 class Request;
+typedef std::shared_ptr<Request> RequestPtr;
 
 class Inventory
 {
 public:
   Inventory() : requests_(new RequestList) {}
 
-  void add(Request *req)
+  // void add(Request *req)
+  void add(const RequestPtr &req)
   {
     zfwmuduo::MutexLockGuard lock(mutex_);
     if (!requests_.unique())
@@ -25,7 +27,8 @@ public:
     requests_->insert(req);
   }
 
-  void remove(Request *req) // __attribute__((noinline))
+  // void remove(Request *req) // __attribute__((noinline))
+  void remove(const RequestPtr &req)
   {
     zfwmuduo::MutexLockGuard lock(mutex_);
     if (!requests_.unique())
@@ -40,7 +43,8 @@ public:
   void printAll() const;
 
 private:
-  typedef std::set<Request *> RequestList;
+  // typedef std::set<Request *> RequestList;
+  typedef std::set<RequestPtr> RequestList;
   typedef std::shared_ptr<RequestList> RequestListPtr;
 
   RequestListPtr getDate() const
@@ -55,22 +59,33 @@ private:
 
 Inventory g_inventory;
 
-class Request
+// class Request
+class Request : public std::enable_shared_from_this<Request>
 {
 public:
   Request() : x_(0) {}
   ~Request() __attribute__((noinline))
   {
-    zfwmuduo::MutexLockGuard lock(mutex_);
+    // zfwmuduo::MutexLockGuard lock(mutex_);
     x_ = -1;
+    // sleep(1);
+    // g_inventory.remove(this);
+  }
+
+  void cancel() __attribute__((noinline))
+  {
+    zfwmuduo::MutexLockGuard lock(mutex_);
+    x_ = 1;
     sleep(1);
-    g_inventory.remove(this);
+    printf("cancel()\n");
+    g_inventory.remove(shared_from_this());
   }
 
   void process() // __attribute__ ((noinline))
   {
     zfwmuduo::MutexLockGuard lock(mutex_);
-    g_inventory.add(this);
+    // g_inventory.add(this);
+    g_inventory.add(shared_from_this());
     // ...
   }
 
@@ -90,7 +105,10 @@ void Inventory::printAll() const
 {
   zfwmuduo::MutexLockGuard lock(mutex_);
   sleep(1); // 为了容易复现死锁, 这里用了延时
-  for (std::set<Request *>::const_iterator it = requests_->begin();
+  // for (std::set<Request *>::const_iterator it = requests_->begin();
+  //      it != requests_->end();
+  //      ++it)
+  for (std::set<RequestPtr>::const_iterator it = requests_->begin();
        it != requests_->end();
        ++it)
   {
@@ -116,11 +134,17 @@ void Inventory::printAll() const
 }
 */
 
+// void threadFunc()
+// {
+//   Request *req = new Request;
+//   req->process();
+//   delete req;
+// }
 void threadFunc()
 {
-  Request *req = new Request;
+  RequestPtr req(new Request);
   req->process();
-  delete req;
+  req->cancel();
 }
 
 void thread1()

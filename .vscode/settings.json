@@ -77,6 +77,7 @@
     "socket": "cpp",
     "timer": "cpp",
     "future": "cpp",
-    "stop_token": "cpp"
+    "stop_token": "cpp",
+    "span": "cpp"
   }
 }

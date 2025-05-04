@@ -1,0 +1,172 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "example/example_test"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"example/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 4,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -g -std=c++11 -g  "
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/../base"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/../net"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "ZFWTinyMuduo::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "example_test::@70983d692f648185febe",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g -std=c++11 -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/zhoufeiwei/Desktop/ZFWTinyMuduo/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../lib/libZFWTinyMuduo.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/local/lib/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/local/lib/libgtest_main.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/local/lib/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "example_test",
+	"nameOnDisk" : "example_test",
+	"paths" : 
+	{
+		"build" : "example",
+		"source" : "example"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "example/test_AsyncLogging.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

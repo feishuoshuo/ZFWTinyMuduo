@@ -98,12 +98,20 @@ namespace zfwmuduo
     }
     InetAddress localAddr(local);
 
-    // 2-唤醒subloop; 根据连接成功的sockfd, 创建TcpConnection连接对象
-    TcpConnectionPtr conn(new TcpConnection(ioLoop,
-                                            connName,
-                                            sockfd, // 通过这个fd 底层即可创建Socket对象和Channel
-                                            localAddr,
-                                            peerAddr));
+    // NOTE:!! std::make_shared 会直接创建一个 std::shared_ptr 对象，减少了内存分配的次数
+    //  // 2-唤醒subloop; 根据连接成功的sockfd, 创建TcpConnection连接对象
+    //  TcpConnectionPtr conn(new TcpConnection(ioLoop,
+    //                                          connName,
+    //                                          sockfd, // 通过这个fd 底层即可创建Socket对象和Channel
+    //                                          localAddr,
+    //                                          peerAddr));
+
+    TcpConnectionPtr conn(std::make_shared<TcpConnection>(
+        ioLoop,
+        connName,
+        sockfd,
+        localAddr,
+        peerAddr));
 
     // 3 - 把当前confd封装成channel分发给subloop
     connections_[connName] = conn;
@@ -138,6 +146,7 @@ namespace zfwmuduo
 
     connections_.erase(conn->name());
     EventLoop *ioLoop = conn->getLoop();
+    // 让TcpConnection的生命期延长到调用connectDestroyed()的时刻
     ioLoop->queueInLoop(std::bind(&TcpConnection::connectDestroyed, conn));
   }
 

@@ -7,6 +7,8 @@
 /**
  * muduo库中多路事件分发器Demultiplex的核心:IO多路复用模块
  * 即开启事件循环epoll_wait
+ *
+ * 在现阶段采用LT的好处之一:可通过trace命令直观看到每次poll()的参数列表，容易检查程序行为
  */
 
 namespace zfwmuduo

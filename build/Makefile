@@ -123,6 +123,73 @@ ZFWTinyMuduo/fast:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/build
 .PHONY : ZFWTinyMuduo/fast
 
+#=============================================================================
+# Target rules for targets named example_test
+
+# Build rule for target.
+example_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example_test
+.PHONY : example_test
+
+# fast build rule for target.
+example_test/fast:
+	$(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/build
+.PHONY : example_test/fast
+
+base/AsyncLogging.o: base/AsyncLogging.cc.o
+
+.PHONY : base/AsyncLogging.o
+
+# target to build an object file
+base/AsyncLogging.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o
+.PHONY : base/AsyncLogging.cc.o
+
+base/AsyncLogging.i: base/AsyncLogging.cc.i
+
+.PHONY : base/AsyncLogging.i
+
+# target to preprocess a source file
+base/AsyncLogging.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.i
+.PHONY : base/AsyncLogging.cc.i
+
+base/AsyncLogging.s: base/AsyncLogging.cc.s
+
+.PHONY : base/AsyncLogging.s
+
+# target to generate assembly for a file
+base/AsyncLogging.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.s
+.PHONY : base/AsyncLogging.cc.s
+
+base/CountDownLatch.o: base/CountDownLatch.cc.o
+
+.PHONY : base/CountDownLatch.o
+
+# target to build an object file
+base/CountDownLatch.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o
+.PHONY : base/CountDownLatch.cc.o
+
+base/CountDownLatch.i: base/CountDownLatch.cc.i
+
+.PHONY : base/CountDownLatch.i
+
+# target to preprocess a source file
+base/CountDownLatch.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.i
+.PHONY : base/CountDownLatch.cc.i
+
+base/CountDownLatch.s: base/CountDownLatch.cc.s
+
+.PHONY : base/CountDownLatch.s
+
+# target to generate assembly for a file
+base/CountDownLatch.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.s
+.PHONY : base/CountDownLatch.cc.s
+
 base/CurrentThread.o: base/CurrentThread.cc.o
 
 .PHONY : base/CurrentThread.o
@@ -149,6 +216,33 @@ base/CurrentThread.s: base/CurrentThread.cc.s
 base/CurrentThread.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s
 .PHONY : base/CurrentThread.cc.s
+
+base/LogStream.o: base/LogStream.cc.o
+
+.PHONY : base/LogStream.o
+
+# target to build an object file
+base/LogStream.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o
+.PHONY : base/LogStream.cc.o
+
+base/LogStream.i: base/LogStream.cc.i
+
+.PHONY : base/LogStream.i
+
+# target to preprocess a source file
+base/LogStream.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.i
+.PHONY : base/LogStream.cc.i
+
+base/LogStream.s: base/LogStream.cc.s
+
+.PHONY : base/LogStream.s
+
+# target to generate assembly for a file
+base/LogStream.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.s
+.PHONY : base/LogStream.cc.s
 
 base/Logger.o: base/Logger.cc.o
 
@@ -555,6 +649,60 @@ net/TcpServer.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.s
 .PHONY : net/TcpServer.cc.s
 
+net/Timer.o: net/Timer.cc.o
+
+.PHONY : net/Timer.o
+
+# target to build an object file
+net/Timer.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Timer.cc.o
+.PHONY : net/Timer.cc.o
+
+net/Timer.i: net/Timer.cc.i
+
+.PHONY : net/Timer.i
+
+# target to preprocess a source file
+net/Timer.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Timer.cc.i
+.PHONY : net/Timer.cc.i
+
+net/Timer.s: net/Timer.cc.s
+
+.PHONY : net/Timer.s
+
+# target to generate assembly for a file
+net/Timer.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/Timer.cc.s
+.PHONY : net/Timer.cc.s
+
+net/TimerQueue.o: net/TimerQueue.cc.o
+
+.PHONY : net/TimerQueue.o
+
+# target to build an object file
+net/TimerQueue.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TimerQueue.cc.o
+.PHONY : net/TimerQueue.cc.o
+
+net/TimerQueue.i: net/TimerQueue.cc.i
+
+.PHONY : net/TimerQueue.i
+
+# target to preprocess a source file
+net/TimerQueue.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TimerQueue.cc.i
+.PHONY : net/TimerQueue.cc.i
+
+net/TimerQueue.s: net/TimerQueue.cc.s
+
+.PHONY : net/TimerQueue.s
+
+# target to generate assembly for a file
+net/TimerQueue.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/net/TimerQueue.cc.s
+.PHONY : net/TimerQueue.cc.s
+
 net/poller/DefaultPoller.o: net/poller/DefaultPoller.cc.o
 
 .PHONY : net/poller/DefaultPoller.o
@@ -618,9 +766,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ZFWTinyMuduo"
+	@echo "... example_test"
+	@echo "... base/AsyncLogging.o"
+	@echo "... base/AsyncLogging.i"
+	@echo "... base/AsyncLogging.s"
+	@echo "... base/CountDownLatch.o"
+	@echo "... base/CountDownLatch.i"
+	@echo "... base/CountDownLatch.s"
 	@echo "... base/CurrentThread.o"
 	@echo "... base/CurrentThread.i"
 	@echo "... base/CurrentThread.s"
+	@echo "... base/LogStream.o"
+	@echo "... base/LogStream.i"
+	@echo "... base/LogStream.s"
 	@echo "... base/Logger.o"
 	@echo "... base/Logger.i"
 	@echo "... base/Logger.s"
@@ -666,6 +824,12 @@ help:
 	@echo "... net/TcpServer.o"
 	@echo "... net/TcpServer.i"
 	@echo "... net/TcpServer.s"
+	@echo "... net/Timer.o"
+	@echo "... net/Timer.i"
+	@echo "... net/Timer.s"
+	@echo "... net/TimerQueue.o"
+	@echo "... net/TimerQueue.i"
+	@echo "... net/TimerQueue.s"
 	@echo "... net/poller/DefaultPoller.o"
 	@echo "... net/poller/DefaultPoller.i"
 	@echo "... net/poller/DefaultPoller.s"

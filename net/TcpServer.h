@@ -22,6 +22,9 @@
 
 /**
  * TcpServer: 对外服务器编程使用的类
+ *
+ * 注意:muduo尽量让依赖是单向的, TcpServer会用到Acceptor, 但Acceptor并不知道TcpServer的存在。
+ * TcpServer会创建TcpConnection, 但TcpConnection并不知道TcpServer的存在
  */
 
 namespace zfwmuduo

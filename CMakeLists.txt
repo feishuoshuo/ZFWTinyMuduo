@@ -14,3 +14,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
 file(GLOB SRC_LIST "base/*.cc" "net/*.cc" "net/poller/*.cc")
 #编译生成动态库ZFWTinyMuduo
 add_library(ZFWTinyMuduo SHARED ${SRC_LIST})
+
+# 查找 GTest 库
+find_package(GTest REQUIRED)
+# 添加 example 文件夹
+add_subdirectory(example)

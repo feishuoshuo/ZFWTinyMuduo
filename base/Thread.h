@@ -23,6 +23,10 @@ namespace zfwmuduo
 
     void start(); // 调用它才开始创建子线程
     void join();
+    bool joinable() const
+    {
+      return started_ && !joined_;
+    }
 
     bool started() const { return started_; }
     pid_t pid() const { return tid_; }

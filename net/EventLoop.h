@@ -8,6 +8,8 @@
 #include "../base/noncopyable.h"
 #include "../base/Timestamp.h"
 #include "../base/CurrentThread.h" // currentThread::tid()
+#include "TimerId.h"
+#include "Callbacks.h" // TimerCallback
 
 /**
  * EventLoop：事件循环  <-- Reactor模型上对应Demultiplex(多路事件分发器)
@@ -15,12 +17,17 @@
  * EventLoop包含 ChannelList(多个通道) + Poller
  * 核心组件：poller(epoll的抽象)、Channel通道[epoll所监听的fd + epoll所感兴趣的事件 + epoll_wait通知的事件]
  * 事件分发器Demultiplex模块的实现
+ *
+ * 创建了EventLoop对象的线程是IO线程，其主要功能是运行事件循环EventLoop::loop()
+ * EventLoop对象的生命期通常和所属的线程一样长, 它不必是heap对象
  */
 
 namespace zfwmuduo
 {
   class Channel;
   class Poller;
+  class TimerQueue;
+
   class EventLoop : noncopyable
   {
   public:
@@ -48,6 +55,11 @@ namespace zfwmuduo
     // 判断EventLoop对象是否在自己线程中
     bool isInLoopThread() const { return threadId_ == zfwmuduo::currentThread::tid(); }
 
+    // 方便用户使用的定时器接口
+    TimerId runAt(const Timestamp &time, const TimerCallback &cb);
+    TimerId runAfter(double delay, const TimerCallback &cb);
+    TimerId runEvery(double interval, const TimerCallback &cb);
+
   private:
     void handleRead();        // wakeup()
     void doPendingFunctors(); // 执行回调
@@ -63,6 +75,7 @@ namespace zfwmuduo
 
     Timestamp pollReturnTime_; // poller返回发生事件的channels的时间点
     std::unique_ptr<Poller> poller_;
+    std::unique_ptr<TimerQueue> timerQueue_;
 
     // 当mainloop获取一个新用户的channel, 通过轮询算法选择一个subloop, 通过该成员唤醒subloop处理channel
     // NOTE： wakeupFd_和线程安全队列的设计可以参考《Linux高性能服务器编程(游双)》-半同步/半反应堆模式！！！
@@ -73,7 +86,7 @@ namespace zfwmuduo
     // Channel *currentActiveChannel_;
 
     std::atomic_bool callingPendingFunctors_; // 标识当前loop是否有需要执行的回调操作
-    std::vector<Functor> pendingFunctors_;    // 存储loop需要执行的所有的回调操作
+    std::vector<Functor> pendingFunctors_;    // 回调列表:存储loop需要执行的所有的回调操作
     std::mutex mutex_;                        // 互斥锁, 用来保护上面vector容器的线程安全操作
   };
 

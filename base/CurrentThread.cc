@@ -4,9 +4,13 @@
 
 namespace zfwmuduo
 {
+  /**
+   * 用__thread变量来缓存gettid()的返回值，这样只有在本线程第一次调用时才进行系统调用，
+   * 以后都是直接从thread local缓存的线程id拿到结果
+   */
   namespace currentThread
   {
-    // 变量初初始化
+    // NOTE：变量初初始化 __thread为每个线程创建独立的变量副本
     __thread int t_cachedTid = 0;
     __thread char t_tidString[32] = {0};
     __thread int t_tidStringLength = 0;

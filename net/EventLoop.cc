@@ -8,6 +8,7 @@
 #include "Logger.h" // LOG_FATAL, LOG_DEBUG, LOG_ERROR, LOG_INFO
 #include "Poller.h"
 #include "Channel.h"
+#include "TimerQueue.h"
 #include "../base/CurrentThread.h" // currentThread::tid()
 
 namespace zfwmuduo
@@ -38,7 +39,7 @@ namespace zfwmuduo
                            wakeupChannel_(new Channel(this, wakeupFd_))
   {
     LOG_DEBUG("EventLoop created %p in thread %d \n", this, threadId_);
-    if (t_loopInThisThread)
+    if (t_loopInThisThread) // 检查当前线程是否创建了其他EventLoop对象
     {
       LOG_FATAL("Another EventLoop %p exists in this thread %d", t_loopInThisThread, threadId_);
     }
@@ -58,10 +59,19 @@ namespace zfwmuduo
     wakeupChannel_->enableReading();
   }
 
+  /**
+   * 由于IO线程平时阻塞在事件循环EventLoop::Loop()的poll调用中,
+   * 为了让IO线程能立即执行用户回调，需要设法唤醒它
+   *
+   * 传统办法使用pipe(), IO线程始终监视此管道的readable事件,在需要唤醒时,其他线程往管道里写一个字节,
+   * IO线程从multiplexing阻塞调用中返回
+   *
+   * [优秀做法！]使用linux中的eventfd高校唤醒如下:
+   */
   void EventLoop::handleRead()
   {
     uint64_t one = 1;
-    ssize_t n = read(wakeupFd_, &one, sizeof one);
+    ssize_t n = ::read(wakeupFd_, &one, sizeof one);
     if (n != sizeof one) // 读出现错误，程序还是允许继续运行LOG_ERROR
       LOG_ERROR("EventLoop::handleRead() reads %ld bytes instead of 8", n)
   }
@@ -124,6 +134,7 @@ namespace zfwmuduo
       std::unique_lock<std::mutex> lock(mutex_);
       // TAG：[好手法学习]swap 相当于解放pendingFunctors_, 由于多线程下会不断有回调操作push进pendingFunctors_, 这就很容易导致它延长执行时间
       // 通过swap将当前pendingFunctors_容器中的所有回调操作转移到临时容器中进行操作. 这也不会妨碍到pendingFunctors_继续有新回调操作添加 是一种比较高效的手法
+      // 同时也避免了死锁(因为Functor可能会在调用queueInLoop())
       functors.swap(pendingFunctors_);
     }
 
@@ -182,4 +193,18 @@ namespace zfwmuduo
     return poller_->hasChannel(channel);
   }
 
+  TimerId EventLoop::runAt(const Timestamp &time, const TimerCallback &cb)
+  {
+    return timerQueue_->addTimer(cb, time, 0.0);
+  }
+  TimerId EventLoop::runAfter(double delay, const TimerCallback &cb)
+  {
+    Timestamp time(addTime(Timestamp::now(), delay));
+    return runAt(time, cb);
+  }
+  TimerId EventLoop::runEvery(double interval, const TimerCallback &cb)
+  {
+    Timestamp time(addTime(Timestamp::now(), interval));
+    return timerQueue_->addTimer(cb, time, interval);
+  }
 } // namespace zfwmuduo

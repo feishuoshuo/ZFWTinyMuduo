@@ -35,6 +35,7 @@ namespace zfwmuduo
 
     size_t readableBytes() const { return writeIndex_ - readerIndex_; }
     size_t writeableBytes() const { return buffer_.size() - writeIndex_; }
+    // 返回的是缓冲区中当前已读取数据之前（即 readerIndex_ 之前）的可插入空间的大小
     size_t prependableBytes() const { return readerIndex_; }
 
     // 返回缓冲区中, 可读数据的其实地址
@@ -84,6 +85,14 @@ namespace zfwmuduo
       ensureWritableBytes(len);
       std::copy(data, data + len, beginWrite());
       writeIndex_ += len;
+    }
+
+    void reset()
+    {
+      readerIndex_ = kCheapPrepend;
+      writeIndex_ = kCheapPrepend;
+      buffer_.resize(kCheapPrepend + kInitialSize);
+      std::fill(buffer_.begin(), buffer_.end(), 0); // 清空缓冲区内容
     }
 
     char *beginWrite(size_t len)

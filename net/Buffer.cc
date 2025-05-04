@@ -8,6 +8,8 @@ namespace zfwmuduo
   /**
    * 从fd上读取数据  Poller工作在LT模式
    * Buffer缓冲区是有大小的！！但从fd上读数据时，却不知道tcp数据最终的大小
+   * 1.使用了scatter/gather IO, 并且一部分缓冲区取自stack,这样输入缓冲区足够大,通常一次readv()调用就能完全读数据
+   * 2.它只调用一次read()，没有反复调用read()知道其返回EAGAIN
    */
   ssize_t Buffer::readFd(int fd, int *saveErrno)
   {

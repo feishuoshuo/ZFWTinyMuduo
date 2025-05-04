@@ -2,12 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
+      "label": "buildzfw",
       "type": "shell",
       "command": "g++",
       "args": [
         "-g",
-        "-std=c++11",
+        "-std=c++14",
         "${file}",
         "-o",
         "${workspaceFolder}/${fileBasenameNoExtension}",

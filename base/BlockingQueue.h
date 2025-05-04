@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../base/Mutex.h"
-#include "../../base/Condition.h"
-#include "../../base/noncopyable.h"
-#include "../../base/Thread.h"
+#include "Mutex.h"
+#include "Condition.h"
+#include "noncopyable.h"
+#include "Thread.h"
 
 #include <assert.h>
 #include <deque>

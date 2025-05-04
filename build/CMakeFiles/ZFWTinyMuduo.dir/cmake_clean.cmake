@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "../lib/libZFWTinyMuduo.pdb"
   "../lib/libZFWTinyMuduo.so"
+  "CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Timestamp.cc.o"
@@ -17,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZFWTinyMuduo.dir/net/Socket.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/TcpConnection.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/TcpServer.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/net/Timer.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/net/TimerQueue.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/poller/DefaultPoller.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/net/poller/EPollPoller.cc.o"
 )

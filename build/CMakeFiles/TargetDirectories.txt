@@ -1,3 +1,6 @@
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/rebuild_cache.dir
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/edit_cache.dir
 /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/rebuild_cache.dir
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/edit_cache.dir
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/example_test.dir

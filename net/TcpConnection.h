@@ -15,6 +15,8 @@
  *
  * TcpServer -> Acceptor -> 有一个新用户连接, 通过accept函数拿到confd
  * -> TcpConnection 设置回调 -> Channel -> Poller -> Channel的回调操作
+ *
+ * muduo只有一种关闭连接的方式:被动关闭。即对方先关闭连接, 本地read()返回0
  */
 
 namespace zfwmuduo
