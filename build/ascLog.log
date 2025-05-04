@@ -1,0 +1,12 @@
+this is a test log message for testing AsyncLogging in single thread.
+this is a test log message for testing AsyncLogging in single thread.
+this is 0 test log message for testing AsyncLogging in single thread 0.
+this is 0 test log message for testing AsyncLogging in single thread 1.
+this is 1 test log message for testing AsyncLogging in single thread 0.
+this is 1 test log message for testing AsyncLogging in single thread 1.
+this is 2 test log message for testing AsyncLogging in single thread 0.
+this is 2 test log message for testing AsyncLogging in single thread 1.
+this is 3 test log message for testing AsyncLogging in single thread 0.
+this is 3 test log message for testing AsyncLogging in single thread 1.
+this is 4 test log message for testing AsyncLogging in single thread 0.
+this is 4 test log message for testing AsyncLogging in single thread 1.

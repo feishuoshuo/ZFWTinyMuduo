@@ -217,6 +217,33 @@ base/CurrentThread.cc.s:
 	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.s
 .PHONY : base/CurrentThread.cc.s
 
+base/LogFile.o: base/LogFile.cc.o
+
+.PHONY : base/LogFile.o
+
+# target to build an object file
+base/LogFile.cc.o:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o
+.PHONY : base/LogFile.cc.o
+
+base/LogFile.i: base/LogFile.cc.i
+
+.PHONY : base/LogFile.i
+
+# target to preprocess a source file
+base/LogFile.cc.i:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.i
+.PHONY : base/LogFile.cc.i
+
+base/LogFile.s: base/LogFile.cc.s
+
+.PHONY : base/LogFile.s
+
+# target to generate assembly for a file
+base/LogFile.cc.s:
+	$(MAKE) -f CMakeFiles/ZFWTinyMuduo.dir/build.make CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.s
+.PHONY : base/LogFile.cc.s
+
 base/LogStream.o: base/LogStream.cc.o
 
 .PHONY : base/LogStream.o
@@ -776,6 +803,9 @@ help:
 	@echo "... base/CurrentThread.o"
 	@echo "... base/CurrentThread.i"
 	@echo "... base/CurrentThread.s"
+	@echo "... base/LogFile.o"
+	@echo "... base/LogFile.i"
+	@echo "... base/LogFile.s"
 	@echo "... base/LogStream.o"
 	@echo "... base/LogStream.i"
 	@echo "... base/LogStream.s"

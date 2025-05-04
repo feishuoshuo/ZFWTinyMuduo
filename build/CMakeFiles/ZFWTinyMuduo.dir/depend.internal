@@ -7,6 +7,7 @@ CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Condition.h
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CountDownLatch.h
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.h
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Mutex.h
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Thread.h
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
@@ -23,6 +24,12 @@ CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o
 CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.cc
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.cc
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.h
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Mutex.h
+ /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
 CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o
  /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogStream.cc
 CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o

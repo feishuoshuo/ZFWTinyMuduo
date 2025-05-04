@@ -6,6 +6,7 @@ CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/AsyncLogging.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/Condition.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/CountDownLatch.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/CurrentThread.h
+CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/LogFile.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/Mutex.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/Thread.h
 CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o: ../base/Timestamp.h
@@ -22,6 +23,12 @@ CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o: ../base/noncopyable.h
 
 CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o: ../base/CurrentThread.cc
 CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o: ../base/CurrentThread.h
+
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o: ../base/CurrentThread.h
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o: ../base/LogFile.cc
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o: ../base/LogFile.h
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o: ../base/Mutex.h
+CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o: ../base/noncopyable.h
 
 CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o: ../base/LogStream.cc
 

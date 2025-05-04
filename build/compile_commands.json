@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
+  "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.cc",
+  "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.cc"
+},
+{
+  "directory": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build",
   "command": "/usr/bin/g++  -DZFWTinyMuduo_EXPORTS -I/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base   -g -std=c++11 -g -fPIC   -o CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o -c /home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogStream.cc",
   "file": "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogStream.cc"
 },

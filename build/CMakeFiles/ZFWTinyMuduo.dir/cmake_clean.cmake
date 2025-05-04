@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o"
+  "CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
   "CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.o"

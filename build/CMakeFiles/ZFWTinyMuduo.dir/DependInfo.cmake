@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/AsyncLogging.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/AsyncLogging.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CountDownLatch.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/CountDownLatch.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/CurrentThread.cc.o"
+  "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/LogFile.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogStream.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/LogStream.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Logger.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/Logger.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Thread.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/CMakeFiles/ZFWTinyMuduo.dir/base/Thread.cc.o"
