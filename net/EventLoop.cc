@@ -36,7 +36,8 @@ namespace zfwmuduo
                            threadId_(zfwmuduo::currentThread::tid()),
                            poller_(Poller::newDefaultPoller(this)),
                            wakeupFd_(createEventfd()),
-                           wakeupChannel_(new Channel(this, wakeupFd_))
+                           wakeupChannel_(new Channel(this, wakeupFd_)),
+                           timerQueue_(new TimerQueue(this))
   {
     LOG_DEBUG("EventLoop created %p in thread %d \n", this, threadId_);
     if (t_loopInThisThread) // 检查当前线程是否创建了其他EventLoop对象
@@ -98,10 +99,12 @@ namespace zfwmuduo
       activateChannels_.clear();
       // 监听两类fd: 一种是client的fd[正常与客户端通信的]; 一种是wakeupfd[mainLoop与subLoop通信的手段]
       pollReturnTime_ = poller_->poll(kPollTimeMs, &activateChannels_); // 也是发生阻塞处, 需要被wakeup(相当于subLoop被wakeup)
+
       for (Channel *channel : activateChannels_)
       { // Poller监听哪些channel发生事件了, 然后上报给EventLoop, 通知channel处理相应的事件
         channel->handleEvent(pollReturnTime_);
       }
+
       // TAG: 执行当前EventLoop事件循环需要处理的回调操作
       /**
        * IO线程, 即mainLoop: accept(主要是接收新用户的连接), 之后会返回一个fd(我们会用channel去打包)
@@ -117,8 +120,10 @@ namespace zfwmuduo
   // TAG: 退出事件循环：1.loop在自己的线程中调用quit 2.在非loop的线程中, 调用loop的quit
   void EventLoop::quit()
   {
+    LOG_INFO("EventLoop %p quit() called in thread %d\n", this, zfwmuduo::currentThread::tid());
     quit_ = true;
 
+    LOG_INFO("EventLoop %p wakeup() called in thread %d\n", this, zfwmuduo::currentThread::tid());
     //!!! 如果是在其他线程中调用了quit. 例如, 在一个subLoop(workerThread)中, 调用了mainLoop(IO thread)的quit
     if (!isInLoopThread())
       wakeup();
@@ -127,6 +132,7 @@ namespace zfwmuduo
   // 执行回调
   void EventLoop::doPendingFunctors()
   {
+    LOG_INFO("EventLoop %p doPendingFunctors() called in thread %d\n", this, zfwmuduo::currentThread::tid());
     std::vector<Functor> functors;
     callingPendingFunctors_ = true;
 
@@ -173,8 +179,9 @@ namespace zfwmuduo
   // TAG: 唤醒loop所在线程  向wakeupfd_写一个数据, wakeupChannel就发生读事件, 当前loop线程就会被唤醒
   void EventLoop::wakeup()
   {
+    LOG_INFO("EventLoop %p wakeup() called in thread %d\n", this, zfwmuduo::currentThread::tid());
     uint64_t one = 1;
-    ssize_t n = write(wakeupFd_, &one, sizeof one);
+    ssize_t n = ::write(wakeupFd_, &one, sizeof one);
     if (n != sizeof one)
       LOG_ERROR("EventLoop::wakeup() writes %ld bytes instead of 8", n);
   }
@@ -207,4 +214,10 @@ namespace zfwmuduo
     Timestamp time(addTime(Timestamp::now(), interval));
     return timerQueue_->addTimer(cb, time, interval);
   }
+
+  void EventLoop::cancel(TimerId timerId)
+  {
+    return timerQueue_->cancel(timerId);
+  }
+
 } // namespace zfwmuduo

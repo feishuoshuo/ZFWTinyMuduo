@@ -125,6 +125,33 @@ example_test/fast:
 	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/build
 .PHONY : example_test/fast
 
+main.o: main.cc.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cc.o:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/main.cc.o
+.PHONY : main.cc.o
+
+main.i: main.cc.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/main.cc.s
+.PHONY : main.cc.s
+
 test_AsyncLogging.o: test_AsyncLogging.cc.o
 
 .PHONY : test_AsyncLogging.o
@@ -152,6 +179,33 @@ test_AsyncLogging.cc.s:
 	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/test_AsyncLogging.cc.s
 .PHONY : test_AsyncLogging.cc.s
 
+test_EventLoop.o: test_EventLoop.cc.o
+
+.PHONY : test_EventLoop.o
+
+# target to build an object file
+test_EventLoop.cc.o:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/test_EventLoop.cc.o
+.PHONY : test_EventLoop.cc.o
+
+test_EventLoop.i: test_EventLoop.cc.i
+
+.PHONY : test_EventLoop.i
+
+# target to preprocess a source file
+test_EventLoop.cc.i:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/test_EventLoop.cc.i
+.PHONY : test_EventLoop.cc.i
+
+test_EventLoop.s: test_EventLoop.cc.s
+
+.PHONY : test_EventLoop.s
+
+# target to generate assembly for a file
+test_EventLoop.cc.s:
+	cd /home/zhoufeiwei/Desktop/ZFWTinyMuduo/build && $(MAKE) -f example/CMakeFiles/example_test.dir/build.make example/CMakeFiles/example_test.dir/test_EventLoop.cc.s
+.PHONY : test_EventLoop.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +215,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... example_test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... test_AsyncLogging.o"
 	@echo "... test_AsyncLogging.i"
 	@echo "... test_AsyncLogging.s"
+	@echo "... test_EventLoop.o"
+	@echo "... test_EventLoop.i"
+	@echo "... test_EventLoop.s"
 .PHONY : help
 
 

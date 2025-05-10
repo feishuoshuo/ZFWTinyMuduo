@@ -7,11 +7,12 @@
       "command": "g++",
       "args": [
         "-g",
-        "-std=c++14",
+        "-std=c++17",
         "${file}",
         "-o",
         "${workspaceFolder}/${fileBasenameNoExtension}",
-        "-lZFWTinyMuduo",
+        "-L/home/zhoufeiwei/Desktop/ZFWTinyMuduo/lib",
+        "-lZFWTinyMuduo","-lrt","-lgtest_main","-lgtest",
         "-lpthread"
       ],
       "group": "build",

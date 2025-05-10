@@ -59,6 +59,7 @@ namespace zfwmuduo
     TimerId runAt(const Timestamp &time, const TimerCallback &cb);
     TimerId runAfter(double delay, const TimerCallback &cb);
     TimerId runEvery(double interval, const TimerCallback &cb);
+    void cancel(TimerId timerId);
 
   private:
     void handleRead();        // wakeup()

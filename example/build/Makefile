@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/build/CMakeFiles /home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/build/CMakeFiles/progress.marks
@@ -110,6 +121,64 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named example_test
+
+# Build rule for target.
+example_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example_test
+.PHONY : example_test
+
+# fast build rule for target.
+example_test/fast:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/build
+.PHONY : example_test/fast
+
+# target to build an object file
+main.o:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/main.o
+.PHONY : main.o
+
+# target to preprocess a source file
+main.i:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/main.i
+.PHONY : main.i
+
+# target to generate assembly for a file
+main.s:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/main.s
+.PHONY : main.s
+
+# target to build an object file
+test_AsyncLogging.o:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_AsyncLogging.o
+.PHONY : test_AsyncLogging.o
+
+# target to preprocess a source file
+test_AsyncLogging.i:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_AsyncLogging.i
+.PHONY : test_AsyncLogging.i
+
+# target to generate assembly for a file
+test_AsyncLogging.s:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_AsyncLogging.s
+.PHONY : test_AsyncLogging.s
+
+# target to build an object file
+test_EventLoop.o:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_EventLoop.o
+.PHONY : test_EventLoop.o
+
+# target to preprocess a source file
+test_EventLoop.i:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_EventLoop.i
+.PHONY : test_EventLoop.i
+
+# target to generate assembly for a file
+test_EventLoop.s:
+	$(MAKE) -f CMakeFiles/example_test.dir/build.make CMakeFiles/example_test.dir/test_EventLoop.s
+.PHONY : test_EventLoop.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -118,6 +187,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... example_test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... test_AsyncLogging.o"
+	@echo "... test_AsyncLogging.i"
+	@echo "... test_AsyncLogging.s"
+	@echo "... test_EventLoop.o"
+	@echo "... test_EventLoop.i"
+	@echo "... test_EventLoop.s"
 .PHONY : help
 
 

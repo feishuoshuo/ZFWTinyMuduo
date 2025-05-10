@@ -1,6 +1,8 @@
 #include "AsyncLogging.h"
 #include "../net/Buffer.h"
 #include "Timestamp.h" // now()
+#include "LogFile.h"
+#include <cstring> // strlen()
 
 namespace zfwmuduo
 {
@@ -14,7 +16,8 @@ namespace zfwmuduo
         basename_(basename),
         rollSize_(rollSize),
         flushInterval_(flushInterval),
-        thread_(std::bind(&AsyncLogging::threadFunc, this), "Logging")
+        thread_(std::bind(&AsyncLogging::threadFunc, this), "Logging"),
+        latch_(1)
   {
     buffers_.reserve(16);
   }
@@ -46,6 +49,8 @@ namespace zfwmuduo
 
   void AsyncLogging::threadFunc()
   {
+    latch_.countDown();
+    LogFile output(basename_, rollSize_);
     BufferPtr newBuffer1(new Buffer);
     BufferPtr newBuffer2(new Buffer);
     BufferVector buffersToWrite;
@@ -76,8 +81,15 @@ namespace zfwmuduo
         snprintf(buf, sizeof buf, "Dropped log messages at %s, %zd larger buffers\n",
                  zfwmuduo::Timestamp::now().toString().c_str(),
                  buffersToWrite.size() - 2);
+
+        output.append(buf, static_cast<int>(strlen(buf)));
         // 仅保留前两个缓冲区
         buffersToWrite.erase(buffersToWrite.begin() + 2, buffersToWrite.end());
+      }
+
+      for (const auto &buffer : buffersToWrite)
+      {
+        output.append(buffer->peek(), buffer->readableBytes());
       }
 
       // 缓冲区清理:
@@ -101,6 +113,8 @@ namespace zfwmuduo
       }
 
       buffersToWrite.clear();
+      output.flush();
     }
+    output.flush();
   }
 } // namespace zfwmuduo

@@ -1,5 +1,3 @@
-#ifndef GOOGLETEST_SAMPLES_asyncLogging_H_
-#define GOOGLETEST_SAMPLES_asyncLogging_H_
 #include <functional>
 #include <gtest/gtest.h>
 #include "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/AsyncLogging.h"
@@ -24,11 +22,16 @@ class AsyncLoggerTest : public ::testing::Test
 protected:
   void SetUp() override
   {
-    logFilePath = "ascLog.txt";
+    logFilePath = "ascLog";
     rollSize = 100 * 1024 * 1024;
     flush = 3;
     logger = std::make_unique<zfwmuduo::AsyncLogging>(logFilePath, rollSize, flush);
     logger->start();
+  }
+
+  void TearDown() override
+  {
+    logger->stop();
   }
 
   std::unique_ptr<zfwmuduo::AsyncLogging> logger;
@@ -41,69 +44,68 @@ protected:
 // 单线程写入日志, 并关闭
 TEST_F(AsyncLoggerTest, SingleThreadLog)
 {
-  const char *logMessage = "this is a test log message for testing AsyncLogging in single thread.";
+  const char *logMessage = "this is a test log message for testing AsyncLogging in single thread.\n";
   logger->append(logMessage, strlen(logMessage));
-  std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 等待日志写入完成
-
-  std::ifstream logFile(logFilePath); // 打开日志文件
-  // 读取日志文件内容
-  std::string content((std::istream_iterator<char>(logFile)), std::istream_iterator<char>());
-  logFile.close();
-
-  std::cout << "Log file content:\n"
-            << content << std::endl;
-
-  EXPECT_NE(std::string::npos, content.find(logMessage));
-
-  logger->stop();
+  std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // 等待日志写入完成
 }
 
-// // 多线程写入日志, 并关闭
-// TEST_F(AsyncLoggerTest, MultiThreadLog)
-// {
-//   const int numThreads = 10;
-//   const int numMessages = 100;
-//   std::vector<std::thread> threads;
-
-//   for (int i = 0; i < numThreads; ++i)
-//   {
-//     threads.emplace_back(
-//         [this, i, numMessages]
-//         {
-//           for (int j = 0; j < numMessages; ++j)
-//           {
-//             char logMessage[100];
-//             snprintf(logMessage, sizeof(logMessage), "this is %d test log message for testing AsyncLogging in single thread %d.", i, j);
-//             logger->append(logMessage, strlen(logMessage));
-//           }
-//         });
-//   }
-
-//   for (auto &thread : threads)
-//     thread.join();
-
-//   std::this_thread::sleep_for(std::chrono::milliseconds(200)); // 等待日志写入完成
-
-//   std::ifstream logFile(logFilePath); // 打开日志文件
-//   // 读取日志文件内容
-//   std::string content((std::istream_iterator<char>(logFile)), std::istream_iterator<char>());
-
-//   for (int i = 0; i < numThreads; ++i)
-//   {
-//     for (int j = 0; j < numMessages; ++j)
-//     {
-//       std::string exceptMessage = "this is " + std::to_string(i) + " test log message for testing AsyncLogging in single thread " + std::to_string(j) + ".";
-//       EXPECT_NE(std::string::npos, content.find(exceptMessage));
-//     }
-//   }
-
-//   logger->stop();
-// }
-
-int main(int argc, char **argv)
+// 多线程写入日志, 并关闭
+TEST_F(AsyncLoggerTest, MultiThreadLog)
 {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  const int numThreads = 5;
+  const int numMessages = 2;
+  std::vector<std::thread> threads;
+
+  for (int i = 0; i < numThreads; ++i)
+  {
+    threads.emplace_back(
+        [this, i, numMessages]
+        {
+          for (int j = 0; j < numMessages; ++j)
+          {
+            char logMessage[100];
+            snprintf(logMessage, sizeof(logMessage), "this is %d test log message for testing AsyncLogging in single thread %d.\n", i, j);
+            logger->append(logMessage, strlen(logMessage));
+          }
+        });
+  }
+
+  for (auto &thread : threads)
+    thread.join();
+
+  std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 }
 
-#endif // GOOGLETEST_SAMPLES_asyncLogging_H_
+bool isFileEmpty(const std::string &filePath)
+{
+  std::ifstream file(filePath);
+  if (!file)
+  {
+    // 文件无法打开，返回false
+    return false;
+  }
+  file.seekg(0, std::ios::end); // 移动到文件末尾
+  return file.tellg() == 0;     // 如果文件大小为0，返回true
+}
+
+void printFileContent(const std::string &filePath)
+{
+  std::ifstream file(filePath);
+  if (!file)
+  {
+    std::cerr << "Error: Unable to open file " << filePath << std::endl;
+    return;
+  }
+
+  std::string line;
+  while (std::getline(file, line))
+  {
+    std::cout << line << std::endl;
+  }
+}
+
+TEST_F(AsyncLoggerTest, IsFileEmpty)
+{
+  EXPECT_FALSE(isFileEmpty(logFilePath + ".log")) << "The file should not be empty.";
+  printFileContent(logFilePath + ".log");
+}

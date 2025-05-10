@@ -32,6 +32,7 @@ namespace zfwmuduo
     TimerId addTimer(const zfwmuduo::TimerCallback &cb,
                      zfwmuduo::Timestamp when,
                      double interval);
+    void cancel(TimerId timerId);
 
   private:
     // 这样即便两个Timer的到期时间享同,他们地址也必定不同
@@ -40,7 +41,6 @@ namespace zfwmuduo
     typedef std::pair<Timer *, int64_t> ActiveTimer;
     typedef std::set<ActiveTimer> ActiveTimerSet;
 
-    void cancel(TimerId timerId);
     void addTimerInLoop(Timer *timer);
     void cancelInLoop(TimerId timerId);
     void handleRead(); // 某个函数或回调会在timerfd触发时被调用

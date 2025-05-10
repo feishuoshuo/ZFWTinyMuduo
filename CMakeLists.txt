@@ -1,12 +1,16 @@
-cmake_minimum_required(VERSION 2.8)# 需求的最低的cmake程序版本
+cmake_minimum_required(VERSION 3.10)# 需求的最低的cmake程序版本
 project(ZFWTinyMuduo)
+
+# 设置 C++ 标准为 C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(base)
 
 #ZFWTinyMuduo最终编译成.so动态库，设置动态库路径
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #设置调试信息 以及 启动c++11语言标准
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++17")
 
 #定义参与编译的源代码文件 .指的是该项目根目录下所有源文件
 # aux_source_directory(. SRC_LIST)

@@ -6,45 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
-unistd.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.cc
+Timestamp.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
+time.h
 -
-sys/syscall.h
+sys/time.h
 -
 
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.cc
-LogFile.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.h
-Mutex.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Mutex.h
+/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Timestamp.h
+iostream
+-
 string
 -
-ctime
--
-
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/LogFile.h
-noncopyable.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
-Mutex.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Mutex.h
-string
--
-memory
--
-fstream
--
-atomic
--
-
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/Mutex.h
-noncopyable.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
-CurrentThread.h
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/CurrentThread.h
-assert.h
--
-pthread.h
--
-
-/home/zhoufeiwei/Desktop/ZFWTinyMuduo/base/noncopyable.h
 

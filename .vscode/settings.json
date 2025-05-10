@@ -1,4 +1,6 @@
-{
+{"clangd.arguments": [
+  "--complie-commands-dir=${workspaceFolder}/build",
+],
   "files.associations": {
     "array": "cpp",
     "atomic": "cpp",

@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/main.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/example_test.dir/main.cc.o"
   "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/test_AsyncLogging.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/example_test.dir/test_AsyncLogging.cc.o"
+  "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/example/test_EventLoop.cc" "/home/zhoufeiwei/Desktop/ZFWTinyMuduo/build/example/CMakeFiles/example_test.dir/test_EventLoop.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

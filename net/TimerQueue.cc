@@ -56,9 +56,7 @@ namespace zfwmuduo
     std::memset(&oldValue, 0, sizeof oldValue);
 
     newValue.it_value = howMuchTimeFromNow(expiration);
-    // 将 int 转换为 timer_t
-    timer_t timerfd_id = reinterpret_cast<timer_t>(timerfd);
-    int ret = ::timer_settime(timerfd_id, 0, &newValue, &oldValue);
+    int ret = ::timerfd_settime(timerfd, 0, &newValue, &oldValue);
     if (ret)
     {
       LOG_ERROR("timerfd_settime()");

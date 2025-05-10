@@ -43,6 +43,8 @@ namespace zfwmuduo
     void start()
     {
       running_ = true;
+      thread_.start();
+      latch_.wait();
     }
     void stop() // NO_THREAD_SAFETY_ANALYSIS
     {
@@ -70,7 +72,7 @@ namespace zfwmuduo
     size_t rollSize_;         // 日志文件的最大大小，当达到这个大小时，日志文件会滚动
     const int flushInterval_; // 刷新时间间隔
     zfwmuduo::Thread thread_;
-    // zfwmuduo::CountDownLatch latch_;
+    zfwmuduo::CountDownLatch latch_; // 用于线程间协调
   };
 
 } // namespace zfwmuduo

@@ -12,7 +12,7 @@
 					],
 					"minimumCMakeVersion" : 
 					{
-						"string" : "2.8"
+						"string" : "3.10"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -25,7 +25,7 @@
 					"build" : "example",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "2.8"
+						"string" : "3.10"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -58,14 +58,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZFWTinyMuduo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZFWTinyMuduo-Debug-af7262e12a2deefb322a.json",
+					"jsonFile" : "target-ZFWTinyMuduo-Debug-9907da11ebcf9398adc0.json",
 					"name" : "ZFWTinyMuduo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "example_test::@70983d692f648185febe",
-					"jsonFile" : "target-example_test-Debug-9487725a76570647bde1.json",
+					"jsonFile" : "target-example_test-Debug-be4bae5f5f2bad5903c7.json",
 					"name" : "example_test",
 					"projectIndex" : 0
 				}

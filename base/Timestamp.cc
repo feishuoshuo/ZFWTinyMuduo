@@ -1,11 +1,18 @@
 #include "Timestamp.h"
 #include <time.h> //time localtime
+#include <sys/time.h>
 
 namespace zfwmuduo
 {
   Timestamp::Timestamp() : microSecondsSinceEpoch_(0) {}
   Timestamp::Timestamp(int64_t microSecondsSinceEpoch) : microSecondsSinceEpoch_(microSecondsSinceEpoch) {}
-  Timestamp Timestamp::now() { return Timestamp(time(NULL)); /*隐式构造*/ }
+  Timestamp Timestamp::now()
+  {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    int64_t seconds = tv.tv_sec;
+    return Timestamp(seconds * kMicroSecondsPerSecond + tv.tv_usec);
+  }
   std::string Timestamp::toString() const
   {
     char buf[128] = {0};

@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 4,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -42,7 +42,10 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -g -std=c++11 -g -fPIC  "
+					"fragment" : " -g -std=c++17 -g -fPIC  "
+				},
+				{
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"defines" : 
