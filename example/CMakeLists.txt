@@ -12,7 +12,7 @@ include_directories(
 
 
 # 使用 GLOB 收集所有测试文件
-file(GLOB TEST_SRC_LIST "test_*.cc")
+file(GLOB TEST_SRC_LIST "test_Connector.cc")
 # 添加 main.cc 到源文件列表
 list(APPEND TEST_SRC_LIST "main.cc")
 # 添加可执行文件

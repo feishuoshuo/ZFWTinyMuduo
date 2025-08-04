@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <memory>
 #include <functional> // bind()
+#include <future>     // promise, future
+
 /**
  * 1-在两个线程里各自运行一个EventLoop
  * 2-IO线程调用EventLoop::runInLoop()、EventLoop::runAfter
@@ -42,13 +44,13 @@ protected:
 
   void run4()
   {
-    printf("run4(): pid = %d, flag = %d\n", getpid(), flag.load());
+    printf("run4(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
     loop.quit(); // 先
   }
 
   void run3()
   {
-    printf("run3(): pid = %d, flag = %d\n", getpid(), flag.load());
+    printf("run3(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
     loop.runAfter(1, [this]()
                   { this->run4(); }); // 使用 lambda 表达式捕获 this
     flag.store(3);                    // 后 还没来得及就quit了
@@ -56,7 +58,7 @@ protected:
 
   void run2()
   {
-    printf("run2(): pid = %d, flag = %d\n", getpid(), flag.load());
+    printf("run2(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
     loop.runInLoop([this]()
                    { this->run3(); });
   }
@@ -64,7 +66,7 @@ protected:
   void run1()
   {
     flag.store(1);
-    printf("run1(): pid = %d, flag = %d\n", getpid(), flag.load());
+    printf("run1(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
     loop.runInLoop([this]()
                    { this->run2(); });
     flag.store(2);
@@ -111,7 +113,7 @@ TEST(EventLoopTest, BasicTest)
 // 2-IO线程调用EventLoop::runInLoop()、EventLoop::runAfter
 TEST_F(RunAfter, TestRunAfter)
 {
-  printf("main(): pid = %d, flag = %d\n", getpid(), flag.load());
+  printf("main(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
 
   // 在 EventLoop 中注册 run1 函数，延迟 2 秒执行
   loop.runAfter(2, [this]()
@@ -122,7 +124,7 @@ TEST_F(RunAfter, TestRunAfter)
 
   // 验证最终的 flag 值是否为 3
   EXPECT_EQ(flag.load(), 2);
-  printf("main(): pid = %d, flag = %d\n", getpid(), flag.load());
+  printf("main(): tid = %d, flag = %d\n", zfwmuduo::currentThread::tid(), flag.load());
 }
 
 // 3-跨线程调用EventLoop::runInLoop()、EventLoop::runAfter
@@ -132,11 +134,28 @@ TEST(EventLoopTest, TestRunAfterCross)
 
   zfwmuduo::EventLoopThread loopThread;
   zfwmuduo::EventLoop *loop = loopThread.startLoop();
-  loop->runInLoop(std::bind(&runInThread, "runInThread"));
-  sleep(1);
-  loop->runAfter(2, std::bind(&runInThread, "runInThread"));
-  sleep(3);
-  loop->quit();
+
+  // NOTE：使用 std::promise 和 std::future 同步任务的完成
+  std::promise<void> promise1;
+  std::future<void> future1 = promise1.get_future();
+
+  std::promise<void> promise2;
+  std::future<void> future2 = promise2.get_future();
+
+  loop->runInLoop([loop, &promise1]
+                  {
+                    runInThread("loopThread_runInLoop");
+                    promise1.set_value(); // 通知任务完成
+                  });
+  // 等待任务完成
+  future1.get();
+
+  loop->runAfter(2, [loop, &promise2]
+                 {runInThread("loopThread_runAfter");
+                  promise2.set_value(); });
+  future2.get();
+
+  loop->quit(); // 退出事件循环
 
   printf("exit main().\n");
 }
